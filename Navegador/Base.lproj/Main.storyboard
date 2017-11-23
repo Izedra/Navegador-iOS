@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Navegador" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-AE-pBC">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dRU-TW-4ii"/>
+                                </connections>
+                            </webView>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tTi-xz-9E7">
+                                <rect key="frame" x="82" y="20" width="250" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfDir"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="buz-I3-nBa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-fF-0ou">
+                                <rect key="frame" x="329" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="-&gt;"/>
+                                <connections>
+                                    <action selector="cargar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ect-Xr-ZIy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXf-aZ-TQ2">
+                                <rect key="frame" x="8" y="20" width="30" height="30"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="atras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uvy-5U-zFy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-4G-kyd">
+                                <rect key="frame" x="43" y="20" width="30" height="30"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="avanzar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LmJ-lZ-tDW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NJ7-AE-pBC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="42M-ID-pw4"/>
+                            <constraint firstAttribute="trailing" secondItem="NJ7-AE-pBC" secondAttribute="trailing" id="5OO-3F-vuh"/>
+                            <constraint firstItem="nyT-fF-0ou" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="329" id="5c7-id-cfx"/>
+                            <constraint firstItem="3GK-4G-kyd" firstAttribute="leading" secondItem="GXf-aZ-TQ2" secondAttribute="trailing" constant="5" id="8DE-LG-Rcy"/>
+                            <constraint firstItem="tTi-xz-9E7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="CIr-Z7-GKL"/>
+                            <constraint firstItem="tTi-xz-9E7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HfY-jf-EhB"/>
+                            <constraint firstItem="NJ7-AE-pBC" firstAttribute="top" secondItem="tTi-xz-9E7" secondAttribute="bottom" constant="20" id="aHH-hi-nFb"/>
+                            <constraint firstItem="GXf-aZ-TQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="bD6-hZ-Yjl"/>
+                            <constraint firstItem="NJ7-AE-pBC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="geW-KK-VKr"/>
+                            <constraint firstItem="nyT-fF-0ou" firstAttribute="top" secondItem="tTi-xz-9E7" secondAttribute="top" id="jpu-yv-005"/>
+                            <constraint firstItem="GXf-aZ-TQ2" firstAttribute="baseline" secondItem="3GK-4G-kyd" secondAttribute="baseline" id="kIq-uH-SPs"/>
+                            <constraint firstItem="3GK-4G-kyd" firstAttribute="baseline" secondItem="nyT-fF-0ou" secondAttribute="baseline" id="rNv-2M-hIa"/>
+                            <constraint firstItem="NJ7-AE-pBC" firstAttribute="trailing" secondItem="nyT-fF-0ou" secondAttribute="trailing" id="tOh-W9-XQf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bAtras" destination="GXf-aZ-TQ2" id="0wu-FA-XsZ"/>
+                        <outlet property="bAvanzar" destination="3GK-4G-kyd" id="76H-h9-lor"/>
+                        <outlet property="bCargar" destination="nyT-fF-0ou" id="lzS-UF-cE4"/>
+                        <outlet property="tfDir" destination="tTi-xz-9E7" id="dAi-Ai-NNw"/>
+                        <outlet property="webV1" destination="NJ7-AE-pBC" id="PQ5-uP-2Mq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

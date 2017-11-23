@@ -12,9 +12,13 @@
 		846237C01FA37CF0000D22AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846237BE1FA37CF0000D22AB /* Main.storyboard */; };
 		846237C21FA37CF0000D22AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846237C11FA37CF0000D22AB /* Assets.xcassets */; };
 		846237C51FA37CF0000D22AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846237C31FA37CF0000D22AB /* LaunchScreen.storyboard */; };
+		84B828A31FC5E41E004E4DD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B828A21FC5E41E004E4DD5 /* GoogleService-Info.plist */; };
+		95A923AAF3A23E4BE520007B /* Pods_Navegador.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B27BEFB75AE7725E7D947ED /* Pods_Navegador.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0355C0467514AC6312D52D8D /* Pods-Navegador.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navegador.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Navegador/Pods-Navegador.debug.xcconfig"; sourceTree = "<group>"; };
+		3B27BEFB75AE7725E7D947ED /* Pods_Navegador.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navegador.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846237B71FA37CF0000D22AB /* Navegador.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navegador.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846237BA1FA37CF0000D22AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846237BC1FA37CF0000D22AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		846237C11FA37CF0000D22AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846237C41FA37CF0000D22AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846237C61FA37CF0000D22AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B828A21FC5E41E004E4DD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC473FA1C7987526133D26D1 /* Pods-Navegador.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navegador.release.xcconfig"; path = "Pods/Target Support Files/Pods-Navegador/Pods-Navegador.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A923AAF3A23E4BE520007B /* Pods_Navegador.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70168FBCE0950E60B3C3039D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B27BEFB75AE7725E7D947ED /* Pods_Navegador.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D19A6CA4FE036F5368845B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0355C0467514AC6312D52D8D /* Pods-Navegador.debug.xcconfig */,
+				BC473FA1C7987526133D26D1 /* Pods-Navegador.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		846237AE1FA37CF0000D22AB = {
 			isa = PBXGroup;
 			children = (
 				846237B91FA37CF0000D22AB /* Navegador */,
 				846237B81FA37CF0000D22AB /* Products */,
+				7D19A6CA4FE036F5368845B0 /* Pods */,
+				70168FBCE0950E60B3C3039D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				846237C11FA37CF0000D22AB /* Assets.xcassets */,
 				846237C31FA37CF0000D22AB /* LaunchScreen.storyboard */,
 				846237C61FA37CF0000D22AB /* Info.plist */,
+				84B828A21FC5E41E004E4DD5 /* GoogleService-Info.plist */,
 			);
 			path = Navegador;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846237C91FA37CF0000D22AB /* Build configuration list for PBXNativeTarget "Navegador" */;
 			buildPhases = (
+				C65374009E689FD2D5017537 /* [CP] Check Pods Manifest.lock */,
 				846237B31FA37CF0000D22AB /* Sources */,
 				846237B41FA37CF0000D22AB /* Frameworks */,
 				846237B51FA37CF0000D22AB /* Resources */,
+				4494F79693A99C11012106F7 /* [CP] Embed Pods Frameworks */,
+				63A32888F2E985ED2B05E0E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +126,7 @@
 				TargetAttributes = {
 					846237B61FA37CF0000D22AB = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -124,12 +154,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				846237C51FA37CF0000D22AB /* LaunchScreen.storyboard in Resources */,
+				84B828A31FC5E41E004E4DD5 /* GoogleService-Info.plist in Resources */,
 				846237C21FA37CF0000D22AB /* Assets.xcassets in Resources */,
 				846237C01FA37CF0000D22AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4494F79693A99C11012106F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Navegador/Pods-Navegador-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Navegador/Pods-Navegador-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63A32888F2E985ED2B05E0E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Navegador/Pods-Navegador-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C65374009E689FD2D5017537 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Navegador-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		846237B31FA37CF0000D22AB /* Sources */ = {
@@ -272,13 +361,16 @@
 		};
 		846237CA1FA37CF0000D22AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0355C0467514AC6312D52D8D /* Pods-Navegador.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navegador/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = usuario.com.Navegador;
+				PRODUCT_BUNDLE_IDENTIFIER = fran.bustamante.org;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,13 +378,16 @@
 		};
 		846237CB1FA37CF0000D22AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC473FA1C7987526133D26D1 /* Pods-Navegador.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navegador/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = usuario.com.Navegador;
+				PRODUCT_BUNDLE_IDENTIFIER = fran.bustamante.org;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
